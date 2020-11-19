@@ -9,6 +9,7 @@ fun main(){
 //    type int 32 bit
     var myAge = 31
 
+//    print("hello " + myName)
 //    Data Types
     val myByte: Byte = 12
     val myShort: Short = 125
@@ -32,5 +33,23 @@ fun main(){
     val myStr = "Hello World"
     var firstCharInStr = myStr[0]
 
-    print("hello " + myName)
+//    Arithmetic operators (+, -, *, /, %)
+    var result = 5+3
+    val a = 5.0
+    val b = 3
+    var resultDouble : Double
+    resultDouble = a/b
+//    print(resultDouble)
+
+//    Comparison operators (==, !=, <, >, <=, >=)
+    val isEqual = 5==3
+//    println("isEqual is $isEqual")
+
+    val isNotEqual = 5!=5
+//    String interpolation
+    println("isNotEqual is $isNotEqual")
+
+    println("is5greater3 ${-5>3}")
+    println("in5LowerEqua13 ${5 <= 3}")
+    println("in5GreaterEqua13 ${5 >= 3}")
 }
