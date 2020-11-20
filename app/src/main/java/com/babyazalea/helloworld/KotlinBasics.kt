@@ -52,4 +52,19 @@ fun main(){
     println("is5greater3 ${-5>3}")
     println("in5LowerEqua13 ${5 <= 3}")
     println("in5GreaterEqua13 ${5 >= 3}")
+
+//    Assingment operators(+=, -=,*=, /=, %=)
+    var myNum = 5
+    myNum += 3
+    myNum *= 4
+    println("myNum is $myNum")
+
+//    Increment & Decrement  Operators(++, --)
+    myNum++
+    println("myNum is $myNum")
+//    below line is excuted but nothing change beacause JUST EXCUTED, not apply.
+    println("myNum is ${myNum++}")
+//    below line in excuted, and then apply immediately.
+    println("myNum is ${++myNum}")
+    println("myNum is ${--myNum}")
 }
