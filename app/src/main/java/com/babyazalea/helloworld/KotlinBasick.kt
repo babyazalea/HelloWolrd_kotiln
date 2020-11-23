@@ -80,16 +80,16 @@ fun main(){
     }
 
     val age = 17
-   if(age >= 21) {
-            println("now you may drink in the US")
-        } else if (age >= 18) {
-            println("you may vote now")
-        }
-        else if(age >= 16) {"Live now"
-        }
-        else {
-            println("you're too young")
-        }
+    if(age >= 21) {
+        println("now you may drink in the US")
+    } else if (age >= 18) {
+        println("you may vote now")
+    }
+    else if(age >= 16) {"Live now"
+    }
+    else {
+        println("you're too young")
+    }
 
 
     var name = "ty"
@@ -109,15 +109,15 @@ fun main(){
     var season = 3
 
     when(season){
-         1 -> println("Spring")
-         2 -> println("summer")
-         3 -> {
-             println("Fall")
-             println("Autumn")
-         }
-         4 -> {
-             println("winter")
-         }
+        1 -> println("Spring")
+        2 -> println("summer")
+        3 -> {
+            println("Fall")
+            println("Autumn")
+        }
+        4 -> {
+            println("winter")
+        }
     }
 
     var month = 3
@@ -143,4 +143,12 @@ fun main(){
         is String -> println("$x is an String")
         else -> println("$x is none of the above")
     }
+
+//    While loop
+    var y = 1
+    while(y <= 10){
+        println("$y")
+        y++
+    }
+    println("\n while loop is done")
 }
