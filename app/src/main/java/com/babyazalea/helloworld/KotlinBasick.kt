@@ -151,4 +151,32 @@ fun main(){
         y++
     }
     println("\n while loop is done")
+
+    var z =15
+    do{
+        println(z)
+        z++
+    }while(z <= 10)
+
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while(feltTemp == "cold"){
+        roomTemp++
+        if(roomTemp >= 20){
+            feltTemp = "comfy"
+            println("it's comfy now")
+        }
+    }
+
+    for(num in 1..10){
+        println("$num")
+    }
+
+    for(i in 1 until 10){
+        println("$i")
+    }
+
+    for(i in 10 downTo 1 step 2){ // Same as - for(i in 10.downTo(1).step(2))
+        println("$i")
+    }
 }
