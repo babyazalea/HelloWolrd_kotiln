@@ -1,22 +1,22 @@
 package com.babyazalea.helloworld
 
 fun main(){
-    // argument
-    var result = avg(5.0, 3.0)
-    print("result is $result")
-}
+    var name: String = "taeyang"
+    // name = null -> Compilation ERROR
+    var nullableName : String? = "Taeyang"
+    //nullableName = null
 
-fun avg(a: Double, b: Double): Double{
-    return (a+b)/2
-}
+    var len = name.length
+    var len2 = nullableName?.length
+    nullableName?.let { println(it.length) }
 
-// Method - a Method is a Function within a class
-// Parameter (input)
-fun addUp(a: Int, b: Int) : Int{
-    // output
-    return a+b
-}
+    /*
+    if(nullableName != null){
+        var len2 = nullableName.length
+    }else{
+        null
+    }
+    */
 
-fun myFunction(){
-    print("called from myFunction")
+
 }
