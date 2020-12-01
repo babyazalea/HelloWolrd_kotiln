@@ -1,35 +1,26 @@
 package com.babyazalea.helloworld
 
-import java.lang.IllegalArgumentException
+data class User(val id: Long, var name: String)
 
 fun main(){
-    var myCar = Car()
-    println("brand is : ${myCar.myBrand}") // this is 'get'
-    myCar.maxSpeed = 240 // this is 'set'
-    println("Maxspeed is ${myCar.maxSpeed}") // this is 'get'
-    println("My model is ${myCar.myModel}") // this is 'get'
-}
+   val user1 = User(1, "taeyang")
 
-class Car(){
-    lateinit var owner: String
+//    val name = user1.name
+//    println(name)
+//    user1.name = "eunmin"
 
-    val myBrand: String = "BMW"
-        // Custom getter
-        get() {
-            return field.toLowerCase()
-        }
+    val user2 = User(1, "eunmin")
+    println(user1 == user2)
 
-    var maxSpeed: Int = 250
-        // get() = field
-        set(value){
-            field = if(value > 0) value else throw IllegalArgumentException("MaxSpeed cannot be less than 0")
-        }
+    println("User Details: $user1")
 
-    var myModel : String = "M5"
-        private set
+    val updatedUser = user1.copy(name="yangTae")
+    println(user1)
+    println(updatedUser)
 
-    init {
-        this.myModel = "M3"
-        owner = "Frank"
-    }
+    println(updatedUser.component1()) // print 1
+    println(updatedUser.component2()) // print yangtae
+
+    val (id, name) = updatedUser
+    println("id=$id, name=$name")
 }
