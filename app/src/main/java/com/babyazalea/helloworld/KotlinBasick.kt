@@ -1,26 +1,45 @@
 package com.babyazalea.helloworld
 
-data class User(val id: Long, var name: String)
+// Super Class, Parent Class, Base Class
+open class Car(val name: String, val brand: String){
+ open var range: Double = 0.0
+
+ fun extendRange(amount: Double){
+  if(amount > 0)
+   range += amount
+ }
+
+ open fun drive(distance: Double){
+  println("Drove for $distance KM")
+ }
+
+
+}
+
+// Sub Class, Child Class or Derived Class of Vehicle
+open class ElectricCar(name: String, brand: String, batteryLife: Double): Car(name, brand){
+ override var range = batteryLife * 6
+
+ var chargerType = "type1"
+ override fun drive(distance: Double){
+  println("Drove for $distance KM on electricity")
+ }
+
+ fun drive(){
+  println("Drove for $range KM on electricity")
+ }
+}
 
 fun main(){
-   val user1 = User(1, "taeyang")
+ var myCar = Car("A3", "audi")
+ var myECar = ElectricCar("S-model", "Tesla", 85.0)
 
-//    val name = user1.name
-//    println(name)
-//    user1.name = "eunmin"
+ myECar.chargerType = "Type2"
+ myECar.extendRange(200.0)
 
-    val user2 = User(1, "eunmin")
-    println(user1 == user2)
+ myECar.drive()
 
-    println("User Details: $user1")
-
-    val updatedUser = user1.copy(name="yangTae")
-    println(user1)
-    println(updatedUser)
-
-    println(updatedUser.component1()) // print 1
-    println(updatedUser.component2()) // print yangtae
-
-    val (id, name) = updatedUser
-    println("id=$id, name=$name")
+//  Polymorphism
+ myCar.drive(200.0)
+ myECar.drive(200.0)
 }
