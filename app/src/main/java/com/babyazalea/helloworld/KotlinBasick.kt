@@ -1,60 +1,16 @@
 package com.babyazalea.helloworld
 
-abstract class Mammal(val name: String, val origin: String,
-                      val weight: Double) {   // Concrete (Non Abstract) Properties
 
- // Abstract Property (Must be overridden by Subclasses)
- abstract var maxSpeed: Double
-
- // Abstract Methods (Must be implemented by Subclasses)
- abstract fun run()
- abstract fun breath()
-
- // Concrete (Non Abstract) Method
- fun displayDetails() {
-  println("Name: $name, Origin: $origin, Weight: $weight, " +
-          "Max Speed: $maxSpeed")
- }
-}
-
-class Human(name: String, origin: String, weight: Double,
-            override var maxSpeed: Double): Mammal(name, origin, weight) {
-
- override fun run() {
-  // Code to run
-  println("Runs on two legs")
- }
-
- override fun breath() {
-  // Code to breath
-  println("Breath through mouth or nose")
- }
-}
-
-class Elephant(name: String, origin: String, weight: Double,
-               override var maxSpeed: Double): Mammal(name, origin, weight) {
-
- override fun run() {
-  // Code to run
-  println("Runs on four legs")
- }
-
- override fun breath() {
-  // Code to breath
-  println("Breath through the trunk")
- }
-}
 
 fun main() {
- val human = Human("Denis", "Russia",
-         70.0, 28.0)
- val elephant = Elephant("Rosy", "India",
-         5400.0, 25.0)
-
- human.run()
- elephant.run()
-
- human.breath()
- elephant.breath()
-
+ val arrayList = ArrayList<Int>()
+ arrayList.add(1)
+ arrayList.add(2)
+ arrayList.add(3)
+ arrayList.add(4)
+ arrayList.add(5)
+ println("$arrayList")
+ for (i in arrayList){
+  println(i)
+ }
 }
