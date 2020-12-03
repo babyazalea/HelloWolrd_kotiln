@@ -1,12 +1,24 @@
 package com.babyazalea.helloworld
 
+open class Base(){
+ var a = 1 // public by default
+ private var b = 2 // visible to the Base and the Derived class
+ internal val d = 4 // visible inside the same module
+ protected fun e() {} // visible to the Base and the Derived class
+}
 
+class Derived: Base(){
+ // a, c, d, and e() of the Base class are visible
+ // b is not visible
+ // below override can't be done
+ // override val c = 9
+ // c is protected
+}
 
 fun main() {
- val sum: (Int, Int) -> Int = {a: Int, b: Int -> a + b}
- println(sum(3,5))
-
-// even shorter
- val sum1 = {a:Int, b:Int -> println(a + b)}
- sum1(3,5)
+ val base = Base()
+ // base.a and base.d are visible
+ // base.b, base.c and base.e() are not visible
+ val derived = Derived()
+ // derived.c is not visible
 }
