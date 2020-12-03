@@ -3,14 +3,10 @@ package com.babyazalea.helloworld
 
 
 fun main() {
- val arrayList = ArrayList<Int>()
- arrayList.add(1)
- arrayList.add(2)
- arrayList.add(3)
- arrayList.add(4)
- arrayList.add(5)
- println("$arrayList")
- for (i in arrayList){
-  println(i)
- }
+ val sum: (Int, Int) -> Int = {a: Int, b: Int -> a + b}
+ println(sum(3,5))
+
+// even shorter
+ val sum1 = {a:Int, b:Int -> println(a + b)}
+ sum1(3,5)
 }
